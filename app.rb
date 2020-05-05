@@ -2,29 +2,29 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
   # Write your code here!
-  get "/reversename/:name" do 
+  get "/reversename/:name" do
     @name = params[:name]
     @reverse_name = @name.reverse!
   end
 
-  get "/square/:number" do 
+  get "/square/:number" do
     @number = params[:numeber].to_i
     (@number*@number).to_s
   end
 
-  get "/say/:number/:phrase" do 
+  get "/say/:number/:phrase" do
     @number = params[:number].to_i
     @phrase = params[:phrase]
     @return_array = []
 
-    @number.times do 
+    @number.times do
       @return_array << @phrase
     end
 
     @return_array.join(' ')
   end
 
-  get "/say/:word1/:word2/:word3/:word4/:word5" do 
+  get "/say/:word1/:word2/:word3/:word4/:word5" do
     @word1 = params[:word1]
     @word2 = params[:word2]
     @word3 = params[:word3]
@@ -33,7 +33,7 @@ class App < Sinatra::Base
     @word1+" "+@word2+" "+@word3+" "+@word4+" "+@word5+"."
   end
 
-  get "/operation/:number1/:number2" do 
+  get "/operation/:number1/:number2" do
     
   end
 
