@@ -49,7 +49,7 @@ class App < Sinatra::Base
     else
       "Error: operation not supported"
     end
-    @answwer.to_s 
+    @answer.to_s 
   end
 
 end
