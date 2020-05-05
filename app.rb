@@ -37,7 +37,7 @@ class App < Sinatra::Base
     @operation = params[:operation]
     @number1 = params[:number1].to_i
     @number2 = params[:number2].to_i
-    case @operation 
+    case @operation
     when "add"
       @answer = @number1 + @number2
     when "multiply"
@@ -46,7 +46,7 @@ class App < Sinatra::Base
       @answer = @number1 / @number2
     when "subtract"
       @answer = @number1 - @number2
-    else 
+    else
       "Error: operation not supported"
     end
     @answwer.to_s 
